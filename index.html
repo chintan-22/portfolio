@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/3a3bdd4bab.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo3.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Frontend developer</p>
+                <h1>Hi, I'm <span>Chintan Shah</span></h1>
+            </div>
+        </div>
+    </div>
+    <!---- for about section--->
+    <div>
+        <div class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col1">
+                        <img src="images/bg3.jpg">
+                    </div>
+                    <div class="about-col2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I'm enthusiast towards coding and building algorithms.Learning new skills. looking for internship oppertunities.
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Basics</span><br>Java</li>
+                                <li><span>Web Development</span><br>Html,CSS,JS</li>
+                                <li><span>Advanced</span><br>C Programming</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li>
+                                    <Span>Marketing</Span><br>College Committee</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>HSC</span><br>96%</li>
+                                <li><span>SSC</span><br>96%</li>
+                                <li><span>Currently</span><br>Btech in CS at DJ Sanghvi College</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>shahchintan0204@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9372548475</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/_chintanshah_02/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/chintan-22"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/chintan-shah-047518208/?originalSubdomain=in"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="CHINTAN's Resume.final.pdf" download class="btn btn3">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" row="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!----java script for info tabs-->
+    <!--<script>
+        var tablinks = document.getElementsByClassName("tab-link");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classlist.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classlist.remove("active-tab");
+            }
+            event.currentTarget.classlist.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>-->
+</body>
+
+</html>
